@@ -37,7 +37,7 @@ defmodule ConcurrentAcceptance.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:hound, "~> 0.8"}
+     {:hound, "~> 1.0"}
    ]
   end
 
