@@ -17,8 +17,8 @@ defmodule ConcurrentAcceptance.AcceptanceCase do
 
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(ConcurrentAcceptance.Repo)
-    Hound.start_session
-    Hound.Helpers.Navigation.navigate_to Phoenix.Ecto.SQL.Sandbox.path_for(ConcurrentAcceptance.Repo, self)
+    metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(ConcurrentAcceptance.Repo, self())
+    Hound.start_session(metadata: metadata)
     :ok
   end
 end
